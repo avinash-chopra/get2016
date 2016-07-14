@@ -1,17 +1,15 @@
 /**
-This is longest use to get longest Cont. Increasing Sequence
- * 
+ * This is use for get longest cont. sequence in a sequence
  */
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /**
- * @author Avinash
- *
+ * @author Avinash Chopra
+ *	Date july 14 2016
  */
 public class LongestIncreasingSequence {
 
-	/**
-	 * @param args
-	 */
 	public int[] lonestSequence(int inputArray[]){
 		int maxNumOfElement ; 		//store maximum number of elements in result
 		int lowerIndex ;		//lower index of result
@@ -49,11 +47,39 @@ public class LongestIncreasingSequence {
 		}
 		return returnArray;
 	}
+	
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	public int inputMethod(){
+		/*
+		 * This method give integer value
+		 * if input is give wrong then again it run till a correct input
+		 * is not given 
+		 */
+		int inputNumber = 0 ;
+		try{
+			inputNumber = Integer.parseInt(br.readLine());
+		}catch(Exception e){
+			System.out.println("Please Enter the Valid Binary Number");
+			 inputNumber = inputMethod();
+		}
+		return inputNumber;
+	}
+	
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		LongestIncreasingSequence l = new LongestIncreasingSequence();
-		int[] a = {2,5,4,7,5,3,7,8,9,5,3,7};
-		l.lonestSequence(a);
+		
+		LongestIncreasingSequence longestIncreasingSequence = new LongestIncreasingSequence();
+		System.out.println("Enter the length of array");
+		int lengthOfArray = longestIncreasingSequence.inputMethod();
+		int []arrayElements = new int[lengthOfArray];
+		System.out.println("Enter the Elements");
+		for(int i=0;i<lengthOfArray;i++){
+			arrayElements[i] = longestIncreasingSequence.inputMethod();
+		}
+		int[] result = longestIncreasingSequence.lonestSequence(arrayElements);
+		for(int i : result){
+			System.out.print(i+ "\t");
+		}
 
 	}
 
