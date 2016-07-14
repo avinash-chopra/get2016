@@ -1,0 +1,60 @@
+/**
+This is longest use to get longest Cont. Increasing Sequence
+ * 
+ */
+
+/**
+ * @author Avinash
+ *
+ */
+public class LongestIncreasingSequence {
+
+	/**
+	 * @param args
+	 */
+	public int[] lonestSequence(int inputArray[]){
+		int maxNumOfElement ; 		//store maximum number of elements in result
+		int lowerIndex ;		//lower index of result
+		int higherIndex ;		// higher 
+		maxNumOfElement = 0;
+		lowerIndex = 0;
+		higherIndex = 0 ;
+		for(int i = 1;i<inputArray.length ;i++){
+			int tempMaxNumOfElement ;
+			int tempLowerIndex ;
+			int tempHigherIndex ;
+			tempLowerIndex = i;
+			while( i < inputArray.length ){
+				if(inputArray[i] > inputArray[i-1]){
+					i++ ;
+				}
+				else{
+					break ;
+				}
+			}
+			tempHigherIndex = i;
+			tempMaxNumOfElement = tempHigherIndex - tempLowerIndex + 1 ;
+			if(maxNumOfElement < tempMaxNumOfElement){
+				lowerIndex = tempLowerIndex ;
+				higherIndex = tempHigherIndex ;
+				maxNumOfElement = higherIndex - lowerIndex + 1 ; 
+			}
+		}
+		int[] returnArray = new int [higherIndex-lowerIndex+1];
+		int temp;
+		temp = 0 ;
+		for(int i=lowerIndex-1;i<higherIndex;i++){
+			returnArray[temp] = inputArray[i];
+			temp++;
+		}
+		return returnArray;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LongestIncreasingSequence l = new LongestIncreasingSequence();
+		int[] a = {2,5,4,7,5,3,7,8,9,5,3,7};
+		l.lonestSequence(a);
+
+	}
+
+}
