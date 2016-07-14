@@ -56,7 +56,6 @@ public class SortingArray {
 	}
 	
 	public static void main(String[] args) {
-		
 		int loopVariable = 1 ;
 		while(loopVariable == 1 ){
 			int MAX_ARRAY_SIZE = 20;
@@ -75,10 +74,10 @@ public class SortingArray {
 			for(int i=0;i<bLength;i++){
 				bArray[i] = sortingArray.inputMethod();
 			}
-			int c[] = new int[MAX_ARRAY_SIZE] ;
-			int d[] = sortingArray.join(aArray,aLength , bArray, bLength, c);
+			int sortedArray[] = new int[MAX_ARRAY_SIZE] ;
+			int outputArray[] = sortingArray.join(aArray,aLength , bArray, bLength, sortedArray);
 			for(int i=0;i<(aArray.length+bArray.length);i++){
-				System.out.println(d[i]);
+				System.out.println(outputArray[i]);
 			}
 			System.out.println("Enter 1 for run again else enter any othre number ");
 			loopVariable = sortingArray.inputMethod();
