@@ -1,18 +1,18 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  * This class convert binary number into octal number 
  * i make two functions to do this
  * first make binary to decimal and then decimal to binary
  */
 /**
- * @author admin
+ * @author Avinash Chopra
+ * Date July-14-2016
  *
  */
 public class BinaryToOctal {
-
-	/**
-	 * @param args
-	 */	
-
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	public int convertBinaryToOctal(int number){
 		/*
 		 * This function convert binary number into octal number 
@@ -35,7 +35,7 @@ public class BinaryToOctal {
 		 * divide and remainder 
 		 */
 		int decimalNumber;
-		int position;
+		int position;		// To find out the 2's power according to position
 		decimalNumber = 0 ;
 		position = 0 ;
 		
@@ -58,7 +58,7 @@ public class BinaryToOctal {
 		 */
 		int octalNumber;
 		int remender;
-		int position;
+		int position;		// To find out the 10's power according to position
 		int remenderInTenMultiple;
 		
 		position =0;
@@ -89,20 +89,38 @@ public class BinaryToOctal {
 			powerResult = powerResult * base;
 			exponent-- ;
 		}
-		
 		return powerResult;
-		
 	}
+	
+	public int inputMethod(){
+		/*
+		 * This method give integer value
+		 * if input is give wrong then again it run till a correct input
+		 * is not given 
+		 */
+		int inputNumber = 0 ;
+		try{
+			inputNumber = Integer.parseInt(br.readLine());
+		}catch(Exception e){
+			System.out.println("Please Enter the Valid Binary Number");
+			 inputNumber = inputMethod();
+		}
+		return inputNumber;
+	}
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		BinaryToOctal temp = new BinaryToOctal();
-		System.out.println(temp.convertBinaryToOctal(110101));
-		
-		
-		
-		
-		
-		
+		/*
+		 * these line of code run if you give 1 when it ask to run again or not 
+		 */
+		BinaryToOctal binbaryToOctal = new BinaryToOctal();
+		int loopVariable = 1 ;	
+		while(loopVariable == 1){
+			int inputNumber = 0 ;
+			System.out.println("Please Enter the Binary Number");
+			inputNumber = binbaryToOctal.inputMethod();
+			System.out.println(binbaryToOctal.convertBinaryToOctal(inputNumber));
+			System.out.println("Enter 1 for Again Run Otherwise give any other input");
+			loopVariable = binbaryToOctal.inputMethod();
+		}
 	}
-
 }
