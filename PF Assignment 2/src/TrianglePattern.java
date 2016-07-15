@@ -48,7 +48,7 @@ public class TrianglePattern {
 		try{
 			inputNumber = Integer.parseInt(br.readLine());
 		}catch(Exception e){
-			System.out.println("Please Enter the Valid Binary Number");
+			System.out.println("Please Enter the Valid Number");
 			 inputNumber = inputMethod();
 		}
 		return inputNumber;
