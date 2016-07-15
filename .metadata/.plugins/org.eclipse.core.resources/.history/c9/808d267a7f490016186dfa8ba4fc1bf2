@@ -1,0 +1,41 @@
+/**
+ * 
+ */
+
+/**
+ * @author admin
+ *
+ */
+public class SortingArray {
+
+	/**
+	 * @param args
+	 */
+	public int[] join(int a[], int asize, int b[], int bsize, int c[]){
+		int aIndex ;
+		int bIndex ;
+		aIndex = 0;
+		bIndex = 0;
+		 for(int i = 0; aIndex<asize && bIndex<bsize ; i++){
+			 if(a[aIndex] >b[bIndex] ){
+				 c[i] = a[i] ;
+				 aIndex++;
+			 }else{
+				 c[i] = b[i];
+				 bIndex++;
+			 }
+			 
+		 }
+		 if(asize > bsize){
+			 
+		 }
+		
+		return a;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,63 @@
+/**
+ * This class convert binary number into octal number 
+ * i make two functions to do this
+ * first make binary to decimal and then decimal to binary
+ */
+/**
+ * @author admin
+ *
+ */
+public class BinaryToOctal {
+
+	/**
+	 * @param args
+	 */	
+
+	public int convertBinaryToOctal(int number){
+		int octalNumber;
+		int decimalNumber;
+		
+		
+		return 1;
+	}
+	
+	
+	public int	convertBinaryToDecimal(int number){
+		int decimalNumber;
+		int position;
+		decimalNumber = 0 ;
+		position = 0 ;
+		while(number > 0){
+			int lastDigit;
+			int powerResult;
+			powerResult = power(2,position);
+			lastDigit = decimalNumber%10;
+			decimalNumber = decimalNumber + ( lastDigit * powerResult );
+			number = number / 10;
+			position++;
+		}
+		return decimalNumber;
+	}
+	public int power(int base, int exp){
+		int powerResult;
+		powerResult = 1;
+		powerResult = base;
+		while(exp > 0 ){
+			powerResult = powerResult * base;
+			exp--;
+		}
+		return powerResult;
+	}
+	public static void main(String[] args) {
+		
+		
+		// TODO Auto-generated method stub
+		
+		
+		
+		
+		
+		System.out.println(new BinaryToOctal().convertBinaryToDecimal(110101));
+	}
+
+}

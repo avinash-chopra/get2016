@@ -1,0 +1,25 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class TypeTrianglePattern {
+
+	TrianglePattern trianglePattern ;
+	@Before
+	public void setUp() throws Exception {
+		trianglePattern = new TrianglePattern();
+		String test1 = "12345";
+		String test2 = " 1234";
+		String test3 = "  123";
+		String test4 = "   12";
+		String test5 = "    1";
+	}
+
+	@Test
+	public void testPattern() {
+		fail("Not yet implemented");
+	}
+
+}

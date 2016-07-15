@@ -1,0 +1,55 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class TestPyramidPattern {
+
+	String success = "Success" ;
+	String fail = "Fail" ;
+	PyramidPattern pyramidPattern;
+	@Before
+	public void setUp() throws Exception {
+		
+		
+	}
+
+	@Test
+	public void testUpperPartSpaceBefore() {
+		
+		String test1 = "    1";
+		assertEquals(success, test1, pyramidPattern.u);
+	}
+
+	@Test
+	public void testUpperPartAddNumbers() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpperPartBackNumber() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLowerSpaceBefore() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLowerAddNumber() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLowerBackNumber() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testPyramid() {
+		fail("Not yet implemented");
+	}
+
+}

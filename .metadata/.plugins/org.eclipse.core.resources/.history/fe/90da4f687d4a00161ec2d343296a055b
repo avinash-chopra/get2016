@@ -1,0 +1,120 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+/**
+ * 
+ * @author Avinash
+ * @Date 15 july 2016
+ *	This is for testing of PyramidPattern class and it's method
+ */
+public class TestPyramidPattern {
+
+	String success = "Success" ;
+	String fail = "Fail" ;
+	PyramidPattern pyramidPattern;
+	@Before
+	public void setUp() throws Exception {
+		pyramidPattern = new PyramidPattern();
+		
+	}
+
+	@Test
+	/**
+	 * This function check space in upper part of pattern is correct or not
+	 */
+	public void testUpperPartSpaceBefore() {
+		String test1 = "    ";		 // 4 spaces
+		String test2 = "";		// no spaces
+		String test3 = "  ";		// 2 spaces
+		assertEquals(success, test1, pyramidPattern.upperPartSpaceBefore(5, 1));
+		assertEquals(success, test2, pyramidPattern.upperPartSpaceBefore(5, 5));
+		assertNotEquals(fail, test3, pyramidPattern.upperPartSpaceBefore(5, 5));
+	}
+
+	@Test
+	/**
+	 * This function check numbers is correct or not in upper
+	 *  part of pattern
+	 */
+	public void testUpperPartAddNumbers() {
+		String test1 = "1";
+		String test2 = "12";
+		String test3 = "132";
+		assertEquals(success, test1, pyramidPattern.upperPartAddNumbers(1));
+		assertEquals(success, test2, pyramidPattern.upperPartAddNumbers(2));
+		assertNotEquals(fail, test3, pyramidPattern.upperPartAddNumbers(3));
+	}
+
+	@Test
+	/**
+	 * This function check numbers is correct or not in upper
+	 *  part of pattern
+	 */
+	public void testUpperPartBackNumber() {
+		String test1 = "1";
+		String test2 = "21";
+		String test3 = "321";
+		assertEquals(success, test1, pyramidPattern.upperPartBackNumber(2));
+		assertEquals(success, test2, pyramidPattern.upperPartBackNumber(3));
+		assertEquals(success, test3, pyramidPattern.upperPartBackNumber(4));
+	}
+
+	@Test
+	/**
+	 * This function check space in lower part of pattern is correct or not
+	 */
+	public void testLowerSpaceBefore() {
+		String test1 = "    "; 		//4 spaces
+		String test2 = "";		// no spaces
+		String test3 = "  ";		// 2 spaces
+		assertEquals(success, test1, pyramidPattern.lowerSpaceBefore(5, 9));
+		assertEquals(success, test2, pyramidPattern.lowerSpaceBefore(5, 5));
+		assertEquals(success, test3, pyramidPattern.lowerSpaceBefore(5, 7));
+	}
+
+	
+	@Test
+	/**
+	 * This function check numbers is correct or not in Lower
+	 *  part of pattern
+	 */
+	public void testLowerAddNumber() {
+		String test1 = "1"; 
+		String test2 = "12"; 
+		String test3 = "1234"; 
+		assertEquals(success, test1, pyramidPattern.lowerAddNumber(5, 9));
+		assertEquals(success, test2, pyramidPattern.lowerAddNumber(5, 8));
+		assertNotEquals(fail, test3, pyramidPattern.lowerAddNumber(5, 7));
+	}
+
+	@Test
+	/**
+	 * This function check numbers is correct or not in Lower
+	 *  part of pattern
+	 */
+	public void testLowerBackNumber() {
+		String test1 = "1";
+		String test2 = "21";
+		String test3 = "321";
+		assertEquals(success, test1, pyramidPattern.lowerBackNumber(5,8));
+		assertEquals(success, test2, pyramidPattern.lowerBackNumber(5,7));
+		assertEquals(success, test3, pyramidPattern.lowerBackNumber(5,6));
+	}
+
+	@Test
+	/**
+	 * This method check the full pattern is correct or not
+	 */
+	public void testPyramid() {
+		String test1 = "1"; 
+		String test2 = "123454321" ;
+		String test3 = " 123454321" ;
+		assertEquals(success, test1, pyramidPattern.pyramid(1, 1));
+		assertEquals(success, test2, pyramidPattern.pyramid(5, 5));
+		assertEquals(fail, test3, pyramidPattern.pyramid(5, 5));
+	}
+
+}

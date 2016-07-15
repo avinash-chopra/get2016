@@ -1,0 +1,72 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class TestPyramidPattern {
+
+	String success = "Success" ;
+	String fail = "Fail" ;
+	PyramidPattern pyramidPattern;
+	@Before
+	public void setUp() throws Exception {
+		pyramidPattern = new PyramidPattern();
+		
+	}
+
+	@Test
+	public void testUpperPartSpaceBefore() {
+		String test1 = "    ";		 // 4 spaces
+		String test2 = "";		// no spaces
+		String test3 = "  ";		// 2 spaces
+		assertEquals(success, test1, pyramidPattern.upperPartSpaceBefore(5, 1));
+		assertEquals(success, test2, pyramidPattern.upperPartSpaceBefore(5, 5));
+		assertNotEquals(fail, test3, pyramidPattern.upperPartSpaceBefore(5, 5));
+	}
+
+	@Test
+	public void testUpperPartAddNumbers() {
+		String test1 = "1";
+		String test2 = "12";
+		String test3 = "132";
+		assertEquals(success, test1, pyramidPattern.upperPartAddNumbers(1));
+		assertEquals(success, test2, pyramidPattern.upperPartAddNumbers(2));
+		assertNotEquals(fail, test3, pyramidPattern.upperPartAddNumbers(3));
+	}
+
+	@Test
+	public void testUpperPartBackNumber() {
+		String test1 = "1";
+		String test2 = "21";
+		String test3 = "321";
+		assertEquals(success, test1, pyramidPattern.upperPartBackNumber(2));
+		assertEquals(success, test2, pyramidPattern.upperPartBackNumber(3));
+		assertEquals(fail, test3, pyramidPattern.upperPartBackNumber(4));
+	}
+
+	@Test
+	public void testLowerSpaceBefore() {
+		String test1 = "    "; 		//4 spaces
+		assertEquals(success, test1, pyramidPattern.lowerSpaceBefore(5, 9));
+	}
+
+	@Test
+	public void testLowerAddNumber() {
+		String test1 = "1"; 
+		assertEquals(success, test1, pyramidPattern.lowerAddNumber(5, 9));
+	}
+
+	@Test
+	public void testLowerBackNumber() {
+		String test1 = "1"; 
+		assertEquals(success, test1, pyramidPattern.lowerBackNumber(5,8));
+	}
+
+	@Test
+	public void testPyramid() {
+		String test1 = "1"; 
+		assertEquals(success, test1, pyramidPattern.pyramid(1, 1));
+	}
+
+}

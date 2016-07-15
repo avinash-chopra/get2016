@@ -1,0 +1,56 @@
+/**
+This Longest Increasing subsequence is done by dynamic programming with bottom up manner
+ * 
+ */
+
+/**
+ * @author admin
+ *
+ */
+public class LongestIncreasingSequence {
+
+	/**
+	 * @param args
+	 */
+	final int MAX_SIZE = 100 ;
+	 int longArrays[][] ;
+	 int lastIndexInSingleArray[] ;
+	 int maxNumberOfArray;
+	
+	public int longestSubsequence(int a[]){
+		longArrays = new int[MAX_SIZE][MAX_SIZE] ; 
+		lastIndexInSingleArray =  new int[MAX_SIZE];
+		 
+		
+		
+		return 1;
+	}
+	public void addInSubArray(int number){
+		if(maxNumberOfArray == 0){
+			longArrays[0][0] = number ;
+			maxNumberOfArray++;
+			lastIndexInSingleArray[0] = 0;
+		}
+		else{
+			int checkNumberIsInsertedOrNot = 0;
+			for(int i=0;i<maxNumberOfArray;i++){
+				int lastIndexOfThisSubArray;
+				lastIndexOfThisSubArray = lastIndexInSingleArray[i];
+				if(longArrays[i][lastIndexOfThisSubArray] < number){
+					lastIndexInSingleArray[i] ++ ;
+					longArrays[i][lastIndexInSingleArray[i] ] = number;
+					checkNumberIsInsertedOrNot = 1;
+				}
+			}
+			if(checkNumberIsInsertedOrNot == 0 ){
+				maxNumberOfArray ++ ;
+				longArrays[maxNumberOfArray][lastIndexInSingleArray[maxNumberOfArray]] = number;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

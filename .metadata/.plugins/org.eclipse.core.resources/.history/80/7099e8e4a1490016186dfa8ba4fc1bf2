@@ -1,0 +1,22 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class TestFirstComeFirstServer {
+	FirstComeFirstServer sampleClass;
+	int result[][];
+	@Before
+	public void setUp() throws Exception {
+		sampleClass = new FirstComeFirstServer();
+		result = new int[5][5];
+		
+	}
+
+	@Test
+	public void testFCFS() {
+		fail("Not yet implemented");
+	}
+
+}

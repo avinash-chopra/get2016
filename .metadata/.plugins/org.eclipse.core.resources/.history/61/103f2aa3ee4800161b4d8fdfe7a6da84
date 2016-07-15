@@ -1,0 +1,31 @@
+/**
+This remove Duplicate Number from a array
+
+ * 
+ */
+
+/**
+ * @author admin
+ *
+ */
+public class RemoveDuplicateNumber {
+
+	/**
+	 * @param args
+	 */
+	int MAX_NUMBER_LIMIT = 1000000 ;
+	public int RemoveDuplicate(int givenArray[]){
+		int[] referanceArray = new int[MAX_NUMBER_LIMIT];
+		int arrayElements;
+		for(arrayElements : givenArray){
+			
+		}
+		
+		return 1;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

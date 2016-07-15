@@ -1,0 +1,72 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+/**
+ * In this a pattern is display which is reverse right angle triangle 
+ * In this function approach is used.
+ */
+
+public class TrianglePattern {
+	
+	public char[] pattern(int numRow,int position){
+		char[] displayChar = new char[numRow];
+		int charPos = 0;
+		/*
+		 * first store the spaces
+		 */
+		for(int i = 1; i < position ;i++ ){
+			displayChar[charPos] = ' ';
+			charPos++;
+		}
+		/*
+		 * now store the integers
+		 */
+		for(int i=1 ;charPos < numRow ; ){
+			displayChar[charPos] = (char)i;
+			charPos++;
+			i++;
+		}
+		
+		return displayChar;
+	}
+	
+	
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	public int inputMethod(){
+		/*
+		 * This method give integer value
+		 * if input is give wrong then again it run till a correct input
+		 * is not given 
+		 */
+		int inputNumber = 0 ;
+		try{
+			inputNumber = Integer.parseInt(br.readLine());
+		}catch(Exception e){
+			System.out.println("Please Enter the Valid Binary Number");
+			 inputNumber = inputMethod();
+		}
+		return inputNumber;
+	}
+	public static void main(String[] args) {
+		int loopVariable = 1;
+		TrianglePattern trianglePattern = new TrianglePattern();
+		while(loopVariable == 1){
+			int patternSize ;
+			System.out.println("Enter size of pattern");
+			patternSize = trianglePattern.inputMethod();
+			for(int i=1; i<=patternSize;i++){
+				char[] display = trianglePattern.pattern(patternSize, i);
+				for(int j=0;j<patternSize;j++){
+					System.out.print(display[j]);
+				}
+				System.out.println();
+			}
+			
+			System.out.println("want to print more pattern enter 1 "
+					+ "otherwise any other number");			
+		}
+		
+
+	}
+
+}

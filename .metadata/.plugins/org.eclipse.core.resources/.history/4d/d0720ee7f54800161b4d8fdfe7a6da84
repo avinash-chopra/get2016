@@ -1,0 +1,27 @@
+/**
+This Longest Increasing subsequence is done by dynamic programming with bottom up manner
+ * 
+ */
+
+/**
+ * @author admin
+ *
+ */
+public class LongestIncreasingSequence {
+
+	/**
+	 * @param args
+	 */
+	final int MAX_SIZE = 100 ;
+	public int longArrays[] ;
+	public int longestSubsequence(int a[]){
+		
+		
+		return 1;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

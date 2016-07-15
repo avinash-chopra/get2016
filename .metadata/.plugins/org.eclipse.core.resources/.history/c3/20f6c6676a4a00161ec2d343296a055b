@@ -1,0 +1,48 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class TestPyramidPattern {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void testUpperPartSpaceBefore() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpperPartAddNumbers() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpperPartBackNumber() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLowerSpaceBefore() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLowerAddNumber() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLowerBackNumber() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testPyramid() {
+		fail("Not yet implemented");
+	}
+
+}
