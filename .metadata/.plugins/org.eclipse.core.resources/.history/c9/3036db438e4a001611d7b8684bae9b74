@@ -116,7 +116,7 @@ public class PyramidPattern {
 			 */
 			System.out.println("Enter size of pattern");
 			patternSize = pyramidPattern.inputMethod();
-			if(patternSize <= 0){
+			if(patternSize < 0){
 				continue;
 			}
 			/*

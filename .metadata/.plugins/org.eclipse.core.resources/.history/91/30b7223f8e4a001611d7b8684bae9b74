@@ -58,9 +58,7 @@ public class TrianglePattern {
 			 // get size of pattern in input
 			System.out.println("Enter size of pattern");
 			patternSize = trianglePattern.inputMethod();
-			if(patternSize <= 0){
-				continue;
-			}
+			
 			// get the pattern  
 			for(int i=1; i<=patternSize;i++){
 				String display = trianglePattern.pattern(patternSize, i);
@@ -68,8 +66,8 @@ public class TrianglePattern {
 			}
 			
 			// check if user want to enter more test case
-			System.out.println(" 1 for more  "
-					+ "otherwise enter any other number");		
+			System.out.println("want to print more pattern enter 1 "
+					+ "otherwise enter any other number");	
 			loopVariable = trianglePattern.inputMethod();
 		}
 	}
