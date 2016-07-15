@@ -1,12 +1,17 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 /**
- *  @author Avinash Chopra
+ * @author Avinash Chopra
  * Date july 15 2016 
+ * 
+ */
+
+/**
  *  Display triangle Pattern.
  *  modular approach is used.
  */
 public class TrianglePattern {
+	
 	/**
 	 * 
 	 * @param numRow		Total number of rows in the pattern
@@ -43,7 +48,7 @@ public class TrianglePattern {
 		try{
 			inputNumber = Integer.parseInt(br.readLine());
 		}catch(Exception e){
-			System.out.println("Please Enter the Valid Number");
+			System.out.println("Please Enter the Valid Binary Number");
 			 inputNumber = inputMethod();
 		}
 		return inputNumber;
@@ -58,9 +63,7 @@ public class TrianglePattern {
 			 // get size of pattern in input
 			System.out.println("Enter size of pattern");
 			patternSize = trianglePattern.inputMethod();
-			if(patternSize <= 0){
-				continue;
-			}
+			
 			// get the pattern  
 			for(int i=1; i<=patternSize;i++){
 				String display = trianglePattern.pattern(patternSize, i);
@@ -68,9 +71,12 @@ public class TrianglePattern {
 			}
 			
 			// check if user want to enter more test case
-			System.out.println(" 1 for more  "
-					+ "otherwise enter any other number");		
+			System.out.println("want to print more pattern enter 1 "
+					+ "otherwise enter any other number");	
 			loopVariable = trianglePattern.inputMethod();
 		}
+		
+
 	}
+
 }

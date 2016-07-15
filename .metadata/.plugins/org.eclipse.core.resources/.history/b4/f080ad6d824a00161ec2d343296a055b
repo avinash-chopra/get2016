@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+
 public class PyramidPattern {
 	
 	public String upperPartSpaceBefore(int sizePyramid,int rowPyramid){
@@ -98,7 +99,7 @@ public class PyramidPattern {
 		try{
 			inputNumber = Integer.parseInt(br.readLine());
 		}catch(Exception e){
-			System.out.println("Please Enter the Valid Number");
+			System.out.println("Please Enter the Valid Binary Number");
 			 inputNumber = inputMethod();
 		}
 		return inputNumber;
@@ -111,14 +112,12 @@ public class PyramidPattern {
 		PyramidPattern pyramidPattern = new PyramidPattern();
 		while(loopVariable == 1){
 			int patternSize ;
+			
 			/*
 			 * take input from the user to get size of pattern
 			 */
 			System.out.println("Enter size of pattern");
 			patternSize = pyramidPattern.inputMethod();
-			if(patternSize <= 0){
-				continue;
-			}
 			/*
 			 * now get the pattern by calling function and get the row 
 			 */
@@ -129,9 +128,12 @@ public class PyramidPattern {
 			/*
 			 * now check if user want to enter more test case
 			 */
-			System.out.println(" 1 for more  "
+			System.out.println("want to print more pattern enter 1 "
 					+ "otherwise enter any other number");	
 			loopVariable = pyramidPattern.inputMethod();
 		}
+		
+
 	}
+
 }

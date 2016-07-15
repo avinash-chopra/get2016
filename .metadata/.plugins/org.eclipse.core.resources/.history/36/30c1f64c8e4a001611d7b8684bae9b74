@@ -68,8 +68,8 @@ public class TrianglePattern {
 			}
 			
 			// check if user want to enter more test case
-			System.out.println(" 1 for more  "
-					+ "otherwise enter any other number");		
+			System.out.println("want to print more pattern enter 1 "
+					+ "otherwise enter any other number");	
 			loopVariable = trianglePattern.inputMethod();
 		}
 	}
