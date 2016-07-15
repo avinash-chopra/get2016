@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-
 public class PyramidPattern {
 	
 	public String upperPartSpaceBefore(int sizePyramid,int rowPyramid){
@@ -112,7 +111,6 @@ public class PyramidPattern {
 		PyramidPattern pyramidPattern = new PyramidPattern();
 		while(loopVariable == 1){
 			int patternSize ;
-			
 			/*
 			 * take input from the user to get size of pattern
 			 */
@@ -132,8 +130,5 @@ public class PyramidPattern {
 					+ "otherwise enter any other number");	
 			loopVariable = pyramidPattern.inputMethod();
 		}
-		
-
 	}
-
 }
