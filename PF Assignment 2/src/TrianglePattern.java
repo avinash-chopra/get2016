@@ -1,17 +1,12 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 /**
- * @author Avinash Chopra
+ *  @author Avinash Chopra
  * Date july 15 2016 
- * 
- */
-
-/**
  *  Display triangle Pattern.
  *  modular approach is used.
  */
 public class TrianglePattern {
-	
 	/**
 	 * 
 	 * @param numRow		Total number of rows in the pattern
@@ -75,8 +70,5 @@ public class TrianglePattern {
 					+ "otherwise enter any other number");	
 			loopVariable = trianglePattern.inputMethod();
 		}
-		
-
 	}
-
 }
