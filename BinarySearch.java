@@ -31,7 +31,6 @@ public class BinarySearch {
 
 		int middleIndex;
 		middleIndex = (lowerIndex + upperIndex) / 2;
-		// upper index is greater then lower index
 		// Base condition
 		if (lowerIndex > upperIndex) {
 			return NUMBER_NOT_EXIST;
