@@ -116,6 +116,9 @@ public class PyramidPattern {
 			 */
 			System.out.println("Enter size of pattern");
 			patternSize = pyramidPattern.inputMethod();
+			if(patternSize <= 0){
+				continue;
+			}
 			/*
 			 * now get the pattern by calling function and get the row 
 			 */
@@ -126,7 +129,7 @@ public class PyramidPattern {
 			/*
 			 * now check if user want to enter more test case
 			 */
-			System.out.println("want to print more pattern enter 1 "
+			System.out.println(" 1 for more  "
 					+ "otherwise enter any other number");	
 			loopVariable = pyramidPattern.inputMethod();
 		}
