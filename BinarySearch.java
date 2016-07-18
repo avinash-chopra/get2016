@@ -93,7 +93,7 @@ public class BinarySearch {
 				}
 				System.out.println("Enter the number to be search");
 				target = binarySearch.inputMethod();
-				// calling sorting function
+				// calling searching function
 				resultOfSearching = binarySearch.searching(numbers, 0,
 						totalNumbers - 1, target);
 				// showing output result
