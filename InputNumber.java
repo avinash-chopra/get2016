@@ -1,8 +1,13 @@
 package session2;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+/**
+ * 
+ * @author Avinash Chopra 
+ * @Date 21 july 2016 
+ * This take number from user in input
+ *         
+ */
 public class InputNumber {
 
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
