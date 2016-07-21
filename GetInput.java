@@ -14,8 +14,8 @@ public class GetInput {
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	/**
 	 * 
-	 * @param message // this message show before user input
-	 * @return			//user entered value
+	 * @param message       // this message show before user input
+	 * @return	        //user entered value
 	 * @throws IOException	// if user give wrong input then through exception message
 	 * This method take input from the user
 	 */
