@@ -8,7 +8,7 @@ import java.io.IOException;
  * 
  * @author Avinash Chopra
  * Date 21 july 2016
- *	This is basic form for different users get the feedback and store in a file
+ *	This is basic form for getting feedback and store in a file
  */
 public class Survey {
 
