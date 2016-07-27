@@ -1,0 +1,2 @@
+101,Individual,amit,22
+102,Organization,stc,6756
