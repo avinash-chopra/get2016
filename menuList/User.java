@@ -47,18 +47,18 @@ public class User {
 					+ " contains submenu?\n Press 'y' or 'n'");
 			String response = scanner.next();
 			if (response.equalsIgnoreCase("y")) {
-				menuItem.setType(Constants.TYPE_IS_MENU);
+				menuItem.setType(Menu.TYPE_IS_MENU);
 				// Menu subMenu=new Menu();
 				User.getUserInput(menuItem.menu, menuitemLabel);
 			} else {
-				menuItem.setType(Constants.TYPE_IS_NON_MENU);
+				menuItem.setType(Menu.TYPE_IS_NON_MENU);
 			}
 			menu.getMenuItems().add(menuItem);
 
 		}
 
 		// enter a menu item back after each menu item list
-		MenuItem menuBack = new MenuItem("Back", Constants.TYPE_IS_BACK);
+		MenuItem menuBack = new MenuItem("Back", Menu.TYPE_IS_BACK);
 		menu.getMenuItems().add(menuBack);
 		//scanner.close();
 	}
