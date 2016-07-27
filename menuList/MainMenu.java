@@ -23,7 +23,7 @@ public class MainMenu {
 		Stack.menu[Stack.pointer] = menu;
 
 		// display the menu to the user
-		new Display().display(menu, 1);
+		new Menu().display(menu, 1);
 
 	}
 
