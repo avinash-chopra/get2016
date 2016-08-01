@@ -26,11 +26,11 @@ public class LinkList<T> {
 	 * @param object		// T type object to insert 
 	 * @return				// return true if insert success fully else false
 	 */
-	public boolean inseartAtEnd(T object) {
+	public boolean insertAtEnd(T object) {
 		//temp node to hold references
 		Node<T> tempObject;
 		tempObject = null;
-		tempObject = inseart(head, object);
+		tempObject = insert(head, object);
 		if (tempObject == null) {
 			return false;
 		} else {
@@ -55,7 +55,7 @@ public class LinkList<T> {
 	 * @param data		// data to be insert
 	 * @return			// return address of node where data store
 	 */
-	private Node<T> inseart(Node<T> node, T data) {
+	private Node<T> insert(Node<T> node, T data) {
 		if (node == null) {
 			Node<T> temp = new Node<T>();
 			temp.data = data;
@@ -63,7 +63,7 @@ public class LinkList<T> {
 			return temp;
 		} else {
 			// use recursion 
-			node.address = inseart(node.address, data);
+			node.address = insert(node.address, data);
 			return node;
 		}
 	}
