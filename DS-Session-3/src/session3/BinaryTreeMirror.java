@@ -2,7 +2,11 @@ package session3;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+/**
+ * @Author Avinash Chopra
+ * @Date 02 - Aug - 2016
+ *  
+ */
 public class BinaryTreeMirror {
 
 	int size = 1;
@@ -57,7 +61,13 @@ public class BinaryTreeMirror {
 
 		return node;
 	}
-
+	/**
+	 * 
+	 * @param node		// node of tree
+	 * @param data		// data to be insert 
+	 * @return			// return node where data inserted 
+	 * This use to create a tree and insert data in tree 
+	 */
 	public Node createTree(Node rootNode, int data) {
 		if (rootNode == null) {
 			rootNode = new Node(data);
@@ -75,6 +85,10 @@ public class BinaryTreeMirror {
 		return rootNode;
 	}
 
+	/**
+	 * inorder traverse of tree 
+	 * @param node		// node of tree 
+	 */
 	public void inOrder(Node node) {
 		if (node == null)
 			return;
@@ -118,10 +132,8 @@ public class BinaryTreeMirror {
 		}
 		String inOrderTree1 = "";
 		String inOrderTree2 = "";
-		System.out.println("Inorder traversal of input tree 1 without mirror image :");
 		tree.inOrder(rootTree1);
 		inOrderTree1 = tree.inOrder;
-		System.out.println(inOrderTree1);
 		tree.inOrder = "";
 		tree.mirror(rootTree1);
 		tree.inOrder(rootTree1);
@@ -129,8 +141,6 @@ public class BinaryTreeMirror {
 		tree.inOrder = "";
 		tree.inOrder(rootTree2);
 		inOrderTree2 = tree.inOrder;
-		System.out.println("Inorder traversal of input tree 2 is :");
-		System.out.println(inOrderTree2);
 		if (inOrderTree1.equals(inOrderTree2)) {
 			System.out.println("Trees are Mirror image of each other");
 		} else {
