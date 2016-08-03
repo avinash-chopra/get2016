@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 /**
  * 
  * @author Avinash Chopra
- * @Date 02 - Aug - 2016 traverse a binary search tree in preorder
+ * @Date 02 - Aug - 2016 traverse a binary search tree in postorder
  */
 public class PostOrder {
 
