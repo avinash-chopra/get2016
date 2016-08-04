@@ -2,7 +2,14 @@ package session4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+/**
+ * 
+ * @author Avinash Chopra	
+ * @Date 03-Aug-2016
+ *Allocation of room according to there age
+ *Given - number of room > number of guest 
+ *use linear probing hashing
+ */
 public class Room {
 
 	/**
@@ -24,8 +31,11 @@ public class Room {
 	}
 
 	public static void main(String[] args) {
+		// each user age
 		int userAge[];
+		// allocated room
 		int roomAllocate[];
+		// check room availability  
 		int roomAvailable[];
 		int numberOfUser;
 		int numberOfRoom;
@@ -40,6 +50,7 @@ public class Room {
 		for(int i=0;i<numberOfUser;i++){
 			System.out.print("Enter user number " + (i+1)+" Age:  ");
 			userAge[i] = inputNumber();
+			//use linear probing  method of hashing
 			int index = (userAge[i]%numberOfRoom);
 			while(roomAllocate[i] == 0){
 				if(roomAvailable[index] == 1){
@@ -56,9 +67,5 @@ public class Room {
 		for(int i=0;i<numberOfUser;i++){
 			System.out.println("User number "+(i+1)+" Age "+userAge[i]+" room allocate " +roomAllocate[i]);
 		}
-		
 	}
-	
-			
-
 }
