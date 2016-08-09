@@ -1,72 +1,64 @@
 package session6.assignment2;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 /**
  * 
  * @author Avinash Chopra
  * 
  */
-public class UniqueCharacters {
-
-	private Map<String, Integer> cache;
-
-	public UniqueCharacters() {
-		this.cache = new HashMap<String, Integer>();
-	}
+public class UniqueCharactersImplementor {
 
 	/**
-	 * determines the unique characters in the string
+	 * This method give String
 	 * 
-	 * @param input
-	 * @return
+	 * @return //user input value
 	 */
-	public int uniqueCharacters(String input) {
-		input = input.toLowerCase();
-
-		// convert the input into a single word
-		String[] spaceSeparatedValues = input.split(" ");
-		input = "";
-		for (String temp : spaceSeparatedValues) {
-			input += temp.trim();
+	public static String inputString() {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String inputString = "";
+		try {
+			inputString = br.readLine();
+		} catch (Exception e) {
+			System.out.println("Please Enter the Valid String");
+			inputString = inputString();
 		}
+		return inputString;
+	}
+	public static void main(String[] args) {
 
-		// check if the input is present in the cache
-		int value = isPresentInCache(input);
-		if (value != -1) {
-			return value;
-		} else {
-			Map<Character, Integer> myMap = new HashMap<Character, Integer>();
-			int totalChar = input.length();
-			for (int index = 0; index < totalChar; index++) {
-				myMap.put(input.charAt(index),
-						myMap.get(input.charAt(index) + 1));
+		
+		UniqueCharacters uniqueCharacters = new UniqueCharacters();
+		
+		try {
+			while (true) {
+				int choice = 0;
+				System.out
+						.println("Enter the choice\n1. Enter a string\n2. Exit");
+				String temp = inputString();
+				if (!temp.equalsIgnoreCase("1") && !temp.equalsIgnoreCase("2")) {
+					choice = 5;
+				} else {
+					choice = Integer.parseInt(temp);
+				}
+				switch (choice) {
+				case 1:
+					System.out.println("Enter a string ");
+					String input = inputString();
+					int totalChar = uniqueCharacters.uniqueCharacters(input);
+					System.out.println("Total unique characters in : " + input+ " are " + totalChar);
+					break;
+				case 2:
+					System.out.println("program End,Thank you");
+					System.exit(-1);
+				default:
+					System.out.println("Enter a valid choice");
+					break;
+				}
 			}
-			Set<Character> keySet = myMap.keySet();
-			value = keySet.size();
-
-			// add the character into the cache
-			this.cache.put(input, value);
-			return value;
-		}
+		} catch (Exception exception) {
+			System.out.println("Something went wrong : "+ exception.getMessage());
+		} 
+			
 	}
-
-	/**
-	 * Checks if the input string is present in the cache
-	 * 
-	 * @param input
-	 *            -the input string whose unique characters are to be determined
-	 * @return true if there is a hit in the cache or returns false if there is
-	 *         a miss
-	 */
-	public int isPresentInCache(String input) {
-		if (this.cache.containsKey(input)) {
-			return this.cache.get(input);
-		} else {
-			return -1;
-		}
-	}
-
 }
