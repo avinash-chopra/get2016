@@ -1,0 +1,1 @@
+DELETE FROM titles where publisher_id='1';
