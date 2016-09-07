@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type='text/javascript' src='index.js'> </script>
+		<title> Selectors For Same Level </title>
+	</head>
+	<body>
+		<!--
+			Selectors for traversing elements at the same level:
+			
+			1. .siblings():
+				Get the siblings of each element in the set of matched elements. 
+			Ex:
+			
+		-->
+		<p> 1.Sibling Selector Example </p>
+		<ul class='ul-1'>
+			<li> Hello 1 </li>
+			<li> Hello 2 </li>
+			<li> Hello 3 </li>
+			<li> Hello 4 </li>
+		</ul>
+		
+		<!--
+			2. .children():
+				Get the children of each element in the set of matched elements.
+			Ex:
+		-->
+		<p> 2. Children Selector Example </p>
+		<div id='myDiv'>
+			<span class='mySpan'> Hello </span> <br/> <br/>
+			<span class='mySpan'> Hello Again </span> <br/> <br/>
+			<span class='mySpan'> And Again </span> <br/> <br/>
+		</div>
+		
+		<!--
+			3. .closest():
+				For each element in the set, get the first element that matches 
+				the selector by testing the element itself and 
+				traversing up through its ancestors in the DOM tree.
+			Ex:
+		-->
+		
+		<p> 3. Closest Selector Example </p>
+		<ul class='ul-2'> Top Level UL
+			<li class='item-A'> A </li>
+			<li class='item-B'> B </li>
+			<li class='item-C'> C </li>
+			<ul>
+				Second Level UL
+				<li class='item-1'> 1 </li>
+				<li class='item-2'> 2 </li>
+				<li class='item-3'> 3 </li>
+			</ul>
+		</ul>
+		
+		<!--
+			4. .parent():
+				Get the parent of each element in the current set of matched elements.
+			EX:
+		-->
+		<p> 4. Parent Selector Example </p>
+			
+			<ul class='ul-3'> Top Level UL
+			<li class='item-A'> A </li>
+			<li class='item-B'> B </li>
+			<li class='item-C'> C </li>
+			<ul>
+				Second Level UL
+				<li class='item-1'> 1 </li>
+				<li class='item-2'> 2 </li>
+				<li class='item-3'> 3 </li>
+			</ul>
+		</ul>
+		
+		<!--
+			4. .find():
+				Get the descendents of each element in the current set of matched elements.
+			EX:
+		-->
+		
+		<p> 5. Find Selector Example </p>
+		
+			<div id='myDiv1'>
+				<div id='myDiv2'>
+					<span class='mySpan'> Hello </span> <br/> <br/>
+					<span class='mySpan'> Hello Again </span> <br/> <br/>
+					<span class='mySpan'> And Again </span> <br/> <br/>
+					<div id='myDiv3'>
+						<span class='mySpan1'>  1 </span> <br/> <br/>	
+						<span class='mySpan1'>  2 </span> <br/> <br/>
+						<span class='mySpan1'>  3 </span> <br/> <br/>
+						<span class='mySpan1'>  4 </span> <br/> <br/>
+					</div>
+				</div>
+			</div>
+		
+		<!--
+			4. .next():
+				Get the immediately following sibling of each element set of matched elements.
+			EX:
+		-->
+		
+		<p> 6. Next Selector Example </p>
+			
+			<ul>
+				<li>list item 1</li>
+				<li>list item 2</li>
+				<li class="third-item">list item 3</li>
+				<li>list item 4</li>
+				<li>list item 5</li>
+			</ul>
+		
+		<!--
+			4. .prev():
+				Get the immediately preceding sibling of each element set of matched elements.
+			EX:
+		-->
+			<ul>
+				<li>list item 1</li>
+				<li>list item 2</li>
+				<li>list item 3</li>
+				<li class='fourth-item'>list item 4</li>
+				<li>list item 5</li>
+			</ul>
+			
+			
+	</body>
+</html>
