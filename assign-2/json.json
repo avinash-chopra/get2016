@@ -1,0 +1,33 @@
+{
+    "E01":{
+        "name":"Amit",
+        "email":"Amit@gmail.com",
+        "dob":"12-12-1992",
+        "Address":"shukhalpura, jaipur"
+        
+    },
+    
+    "E02":{
+        "name":"Ritik",
+        "email":"Ritik@gmail.com",
+        "dob":"12-12-2000",
+        "Address":"stc lks"
+        
+    },
+    
+    "E03":{
+        "name":"Vaibhav",
+        "email":"Vaibhavgemail.com",
+        "dob":"12-1-1992",
+        "Address":"chandrapura"
+        
+    },
+    
+    "E04":{
+        "name":"Ashu",
+        "email":"ashu@email.com",
+        "dob":"12-2-1992",
+        "Address":"kota"
+        
+    }
+}

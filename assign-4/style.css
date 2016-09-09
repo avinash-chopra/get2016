@@ -1,0 +1,7 @@
+#fields,#show{
+    width:30%;
+    margin:auto;
+}
+#name,#age,#address{
+    padding:5px;
+}
