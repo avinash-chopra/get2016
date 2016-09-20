@@ -1,0 +1,22 @@
+.cust-row-css{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    padding: 5px;
+}
+body h1{
+    text-align: center;
+}
+.cust_margin{
+    margin-top: 20px;
+}
+.cust_row_2{
+    font-style: italic;
+}
+.cust_row_col{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+}
