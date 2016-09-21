@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TypeTrianglePattern" project="PF Assignment 2" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="TypeTrianglePattern" time="0.0">
-    <testcase name="testPattern" classname="TypeTrianglePattern" time="0.0"/>
-  </testsuite>
-</testrun>
