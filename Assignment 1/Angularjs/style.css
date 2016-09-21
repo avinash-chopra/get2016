@@ -1,0 +1,29 @@
+*{
+    padding:0px;
+    margin: 0px;
+    list-style: none;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    
+}
+img{
+    width: 100px;
+    margin: 0px 20px 0px 0px ;
+}
+.details{
+    overflow: auto;
+    margin:10px 0px 0px 50px;
+}
+li{
+    margin:10px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+}
